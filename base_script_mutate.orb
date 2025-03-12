@@ -1,0 +1,14 @@
+# base_script_mutate.orb
+# Developed by Micah Blake Langford and Co-Developer AI (Grok, xAI)
+# Oroburus mutation script for 'base_script.py'.
+
+consume greet:
+    def greet(name):
+        if 'cycle' in globals() and cycle >= 2:
+            print(f"SUPER ALERT: {name.upper()} DETECTED TWICE!!")
+        else:
+            print(f"ALERT: {name.upper()} DETECTED!")
+
+mutate:
+    cycle = 1
+    print(f"Cycle: {cycle}")
